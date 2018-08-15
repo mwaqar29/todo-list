@@ -1,15 +1,11 @@
 import React from 'react';
 
-const ItemList = ({ elems }) => {
-	const listItems = elems.map((todo) =>
-    	<li key={todo}>
-      		{todo}
-    	</li>
+const ItemList = ({ elements }) => {
+	const listItems = elements.map(todo =>
+		<li key={todo}> {todo} </li>
   	);
 	return (
-		<div>
-			<ul>{listItems}</ul>
-		</div>
+		<ul>{listItems}</ul>
 	);
 }
 

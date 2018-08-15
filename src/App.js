@@ -14,7 +14,7 @@ class App extends Component {
 
   onButtonClick = () => {
     let { todos, item } = this.state;
-    todos = todos.concat({ item });
+    todos = todos.concat(item);
     this.setState({ todos: todos, item: '' });
   }
 
@@ -26,8 +26,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Box onButtonClick={this.onButtonClick} onNewItem={this.onNewItem} />
-        <ItemList elem={this.state.todos}/>
+        <Box item={this.state.item} onButtonClick={this.onButtonClick} onNewItem={this.onNewItem} />
+        <ItemList elements={this.state.todos}/>
       </div>
     );
   }
